@@ -65,8 +65,6 @@ TV metadata is provided by [TVmaze](https://www.tvmaze.com), used under CC BY-SA
 
 Reelign is built with Avalonia, SQLite and other open-source components under their own licences.
 
-Header artwork: created in a ChatGPT conversation and supplied by the owner; its commercial-use terms have not been reviewed.
-
 ## Licence
 
 Copyright (c) Reelign. All rights reserved. The Reelign application and its source are not offered under an open-source licence. Screenshots and text in this repository may not be reused without permission.

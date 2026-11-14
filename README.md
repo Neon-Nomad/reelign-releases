@@ -6,7 +6,7 @@
 
 Reelign identifies TV episodes and movies, previews clean filenames, and renames your existing videos in place. Every batch is recorded, and Undo restores the original names.
 
-> **Status: private beta.** Reelign is in closed testing and is not yet available for public download. This page describes the app and shows it running. Source code is not published in this repository.
+> **Status: public beta.** Reelign is free and the Windows x64 beta is available as a portable ZIP on the [Releases page](https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2) (unzip and run `Reelign.Desktop.exe`; no installer). The build is **not code-signed**, so Windows SmartScreen may warn: choose More info, then Run anyway, and compare the ZIP's SHA-256 with the checksum on the release page. Try it on copies of your media first. Not yet verified on a clean Windows install; Plex/Kodi NFO import and network-share (SMB) use are untested. Source code is not published in this repository. Some TMDB/TVmaze licensing and caching questions are still open; see the [notices](https://neon-nomad.github.io/reelign-releases/legal.html).
 
 ## See it working
 

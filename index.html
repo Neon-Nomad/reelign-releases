@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reelign — free Windows media renamer</title>
-<meta name="description" content="Reelign is a free Windows app that cleans up TV and movie filenames. You see every new name before anything changes, and Undo restores the originals. Private beta.">
+<meta name="description" content="Reelign is a free Windows app that cleans up TV and movie filenames. You see every new name before anything changes, and Undo restores the originals. Free public beta.">
 <meta name="theme-color" content="#0B1117">
 <meta property="og:title" content="Reelign — free Windows media renamer">
-<meta property="og:description" content="See every new filename before anything changes. Undo restores the originals. Free, in private beta.">
+<meta property="og:description" content="See every new filename before anything changes. Undo restores the originals. Free, in public beta.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://neon-nomad.github.io/reelign-releases/screenshots/02-queue-matched-preview.png">
 <link rel="icon" type="image/png" href="icon.png">
@@ -181,7 +181,7 @@ footer p{margin:0 0 .75rem;max-width:52rem}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="icon.png" alt="" width="28" height="28">Reelign<small>private beta</small></a>
+    <a class="brand" href="#top"><img src="icon.png" alt="" width="28" height="28">Reelign<small>public beta</small></a>
     <nav class="links" aria-label="Page sections">
       <a href="#app">The app</a>
       <a href="#video">Videos</a>
@@ -199,10 +199,10 @@ footer p{margin:0 0 .75rem;max-width:52rem}
       <h1>See every new filename before anything changes.</h1>
       <p class="lede">Reelign is a free Windows app that turns release-style names like <code>Show.S01E01.1080p.WEB-DL.mkv</code> into clean ones. <strong>You review the proposed names first.</strong> Every batch is recorded, and Undo puts the originals back.</p>
       <div class="cta-row">
-        <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Ask to join the beta</a>
+        <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">Download the beta for Windows</a>
         <a class="btn ghost" href="#app">See the real app</a>
       </div>
-      <p class="fine">Free, no accounts, no paid features. Windows x64. The download is not public yet.</p>
+      <p class="fine">Free, no accounts, no paid features. Windows 10/11 x64, portable ZIP (no installer). Public beta: the app is not code-signed, so Windows SmartScreen may warn.</p>
     </div>
 
     <div class="stage-col">
@@ -388,8 +388,8 @@ footer p{margin:0 0 .75rem;max-width:52rem}
 <section id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <h2 id="faq-h">Questions</h2>
-    <details><summary>Can I download it?</summary><p>Not yet. Reelign is in a private beta with a small group of testers. Ask to join with the button below, and a public download will be announced on this page when it is ready.</p></details>
-    <details><summary>What do I need to run it?</summary><p>A 64-bit Windows PC. The app is self-contained, so you do not install .NET separately. The beta build is not code-signed, so Windows may show a SmartScreen warning the first time you run it.</p></details>
+    <details><summary>Can I download it?</summary><p>Yes. The public beta is a portable ZIP on the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">GitHub release page</a>, with its SHA-256 checksum. Unzip it anywhere and run <code>Reelign.Desktop.exe</code>; there is no installer. Please try it on copies of your media first.</p></details>
+    <details><summary>What do I need to run it?</summary><p>A 64-bit Windows PC. The app is self-contained, so you do not install .NET separately. The beta is not code-signed (a certificate costs money and Reelign is free), so Windows SmartScreen may show "Windows protected your PC". To continue, choose More info, then Run anyway. To confirm the file is the one we published, compare its SHA-256 with the checksum on the release page: in PowerShell, <code>Get-FileHash .\Reelign-beta-2-win-x64.zip</code>.</p></details>
     <details><summary>Do I need an API key?</summary><p>Not for TV shows. For movies you need your own TMDB API Read Access Token, which is free from TMDB. It stays in memory for the session unless you choose to remember it, and then Windows protects it for your account.</p></details>
     <details><summary>Is it safe for my library?</summary><p>Reelign previews every change, keeps a journal and offers Undo, but no tool should be your only copy. While it is in beta, try it on copies first and keep your usual backups. If a batch is interrupted, Reelign blocks uncertain results instead of guessing.</p></details>
     <details><summary>Does it work with Plex and Kodi?</summary><p>The naming presets follow their conventions. Verified NFO import is so far confirmed only for Jellyfin, and the Plex and Kodi checks are still to do.</p></details>
@@ -400,9 +400,9 @@ footer p{margin:0 0 .75rem;max-width:52rem}
 <section class="final" aria-labelledby="join-h">
   <div class="wrap">
     <div class="box">
-      <h2 id="join-h">Want to try the beta?</h2>
-      <p>Open an issue to ask for access, report a bug or suggest a feature. Tell us which media server you use and roughly how many files you rename.</p>
-      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Open an issue on GitHub</a>
+      <h2 id="join-h">Try the public beta</h2>
+      <p>Download the ZIP, try it on copies of your media, and tell us what you find. Say which media server you use and roughly how many files you rename.</p>
+      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">Download the beta for Windows</a> <a class="btn ghost" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Report a problem</a>
     </div>
   </div>
 </section>

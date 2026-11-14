@@ -202,7 +202,8 @@ footer p{margin:0 0 .75rem;max-width:52rem}
         <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">Download the beta for Windows</a>
         <a class="btn ghost" href="#app">See the real app</a>
       </div>
-      <p class="fine">Free, no accounts, no paid features. Windows 10/11 x64, portable ZIP (no installer). Public beta: the app is not code-signed, so Windows SmartScreen may warn.</p>
+      <p class="fine"><strong>Portable and ready to run.</strong> Reelign includes its own .NET runtime. No separate .NET installation, setup wizard, or additional downloads required.</p>
+      <p class="fine">Free, no accounts, no paid features. Windows 10/11 x64. Public beta: the app is not code-signed, so Windows SmartScreen may warn.</p>
     </div>
 
     <div class="stage-col">
@@ -389,6 +390,7 @@ footer p{margin:0 0 .75rem;max-width:52rem}
   <div class="wrap">
     <h2 id="faq-h">Questions</h2>
     <details><summary>Can I download it?</summary><p>Yes. The public beta is a portable ZIP on the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">GitHub release page</a>, with its SHA-256 checksum. Unzip it anywhere and run <code>Reelign.Desktop.exe</code>; there is no installer. Please try it on copies of your media first.</p></details>
+    <details><summary>Why is the download approximately 46 MB?</summary><p>Reelign includes the .NET runtime it needs to run. That makes the download a little larger, but everything is included. Just extract the ZIP and launch Reelign. No separate .NET installation required.</p></details>
     <details><summary>What do I need to run it?</summary><p>A 64-bit Windows PC. The app is self-contained, so you do not install .NET separately. The beta is not code-signed (a certificate costs money and Reelign is free), so Windows SmartScreen may show "Windows protected your PC". To continue, choose More info, then Run anyway. To confirm the file is the one we published, compare its SHA-256 with the checksum on the release page: in PowerShell, <code>Get-FileHash .\Reelign-beta-2-win-x64.zip</code>.</p></details>
     <details><summary>Do I need an API key?</summary><p>Not for TV shows. For movies you need your own TMDB API Read Access Token, which is free from TMDB. It stays in memory for the session unless you choose to remember it, and then Windows protects it for your account.</p></details>
     <details><summary>Is it safe for my library?</summary><p>Reelign previews every change, keeps a journal and offers Undo, but no tool should be your only copy. While it is in beta, try it on copies first and keep your usual backups. If a batch is interrupted, Reelign blocks uncertain results instead of guessing.</p></details>

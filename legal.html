@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Notices and licences — Reelign</title>
+<meta name="description" content="Data sources, privacy, trademarks and open-source licences for Reelign.">
+<link rel="icon" href="icon.png">
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url("assets/fonts/bricolage-latin.woff2") format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("assets/fonts/jetbrainsmono-latin.woff2") format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
+:root{
+  --ink:#0B1117; --panel:#121B24; --panel-2:#17222D; --line:#25323F;
+  --text:#E6EDF2; --muted:#9AAEBD; --teal:#2DD4BF; --teal-ink:#06312C; --amber:#F2B35E;
+  --sans:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --gutter:clamp(1rem,4vw,2.5rem);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:clamp(16px,calc(16px + (100vw - 1440px) * .005),30px)}
+body{margin:0;background:var(--ink);color:var(--text);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal);text-underline-offset:.18em}
+a:hover{color:#7CEBDD}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:80rem;margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-999px;top:0;background:var(--teal);color:var(--teal-ink);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:var(--gutter);top:.5rem}
+
+header.top{padding-block:1.1rem;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.65rem;color:var(--text);text-decoration:none;font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
+.brand img{width:1.75rem;height:1.75rem;border-radius:.4rem}
+.brand small{font:500 .78rem var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.1rem .55rem;margin-left:.2rem}
+nav.links{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.95rem}
+nav.links a{color:var(--muted);text-decoration:none}
+nav.links a:hover{color:var(--text)}
+
+
+.btn{display:inline-block}
+.draft{background:#2A2112;border:1px solid var(--amber);color:#F6DDB0;border-radius:8px;padding:1rem 1.25rem;margin:0 0 2rem}
+main.legal{padding-block:clamp(2rem,5vw,3.5rem)}
+main.legal h1{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem}
+main.legal h2{font:700 1.35rem/1.25 var(--sans);letter-spacing:-.01em;margin:2.25rem 0 .6rem}
+main.legal p,main.legal li{max-width:46rem;color:var(--muted)}
+main.legal p strong,main.legal li strong{color:var(--text)}
+main.legal ul{padding-left:1.2rem}
+footer{padding-block:2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28">Reelign<small>private beta</small></a>
+  <nav class="links" aria-label="Site"><a href="index.html">Back to the home page</a></nav>
+</div></header>
+
+<main id="main" class="legal"><div class="wrap">
+<div class="draft" role="note"><strong>Status of these notices.</strong> Reelign's owner wrote this page from the providers' public terms as last read on 14 November 2026. It is not legal advice and no lawyer has reviewed it. A few questions are still open and are listed under "Open questions" below. Provider terms change, so check them directly.</div>
+
+<h1>Notices and licences</h1>
+<p>Reelign is a free Windows app for renaming TV and movie files. This page says what it contacts, where its data comes from, and which other people's work it uses.</p>
+
+<h2>Status</h2>
+<p>Reelign is in a private beta. There is no public download. The beta build is not code-signed, so Windows SmartScreen may warn when it is first run.</p>
+
+<h2>What Reelign contacts, and what it keeps</h2>
+<ul>
+  <li><strong>TV lookups</strong> are sent to TVmaze (no key needed). The request contains the show title the app extracted from a file name.</li>
+  <li><strong>Movie lookups</strong> are sent to TMDB and use the user's own TMDB API Read Access Token. The request contains the movie title and year.</li>
+  <li><strong>Poster images</strong> are downloaded from TVmaze's image server (static.tvmaze.com) and TMDB's image server (image.tmdb.org) for the posters shown in the app, and cached on your PC.</li>
+  <li><strong>Nothing else.</strong> The app has no analytics, crash reporting, update checks or accounts. Your queue, rename history, settings and the metadata cache stay on your PC in <code>%LOCALAPPDATA%\Reelign</code>.</li>
+  <li><strong>The TMDB token</strong> is kept in memory for the session unless the user chooses to remember it; it is then protected with Windows data protection for that account.</li>
+  <li><strong>This website</strong> loads its fonts and scripts from its own server. It sets no cookies and has no analytics. GitHub, which hosts this site, keeps its own server logs.</li>
+</ul>
+
+<h2>Data sources</h2>
+<p><strong>TVmaze.</strong> TV metadata is provided by <a href="https://www.tvmaze.com/api">TVmaze</a> and is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. No endorsement by TVmaze is implied. The app credits TVmaze in its About screen.</p>
+<p><strong>TMDB.</strong> This product uses the TMDB API but is not endorsed or certified by TMDB. Movie metadata comes from <a href="https://www.themoviedb.org">The Movie Database</a>.</p>
+<p>Show and movie names that appear in screenshots and videos are used only as examples of file names on disposable test files. No posters, artwork, clips or other media from those titles are shown.</p>
+
+<h2>Open questions</h2>
+<div class="draft" role="note"><p><strong>TMDB</strong> (terms last updated 20 Oct 2023; FAQ 2025):</p><ul>
+<li>Commercial or not: the API is free only for non-commercial use, and TMDB decides "in its sole discretion". Free distribution and a donations link are not addressed. Unresolved; ask TMDB in writing.</li>
+<li>Logo: the terms say the TMDB logo must identify use of TMDB and the notice must be "in or on" the application, and the FAQ says it belongs in an About or Credits section. The terms do not say whether a marketing website needs it. The site shows the notice text but no logo. Unresolved.</li>
+<li>Notice wording: the terms and the FAQ give two different sentences. The app and this page use the shorter FAQ one. Unresolved which controls.</li>
+<li>Caching: TMDB prohibits caching content for longer than 6 months and bars "derivatives". Reelign caches metadata and poster images locally and writes optional NFO files; no expiry was found in the app. Whether local copies and NFO files count is not stated. Unresolved, and possibly an app change.</li>
+<li>The incorporated TMDB general Terms of Use were not read.</li></ul>
+<p><strong>TVmaze</strong>:</p><ul>
+<li>Credit is satisfied by linking back to TVmaze. The Creative Commons deed also asks for a licence link and a note of changes; this page links the licence.</li>
+<li>ShareAlike: TVmaze does not say whether locally cached data, NFO files or transformed metadata are adaptations, or what licence they must carry. Unresolved.</li>
+<li>Images: the API page does not state a licence for images and allows hotlinking and caching. Unresolved.</li>
+<li>Limit: about 20 calls per 10 seconds per IP. Not yet checked against the app's behaviour.</li></ul></div>
+
+<h2>Trademarks</h2>
+<p>Plex, Jellyfin, Kodi, TMDB, TVmaze, Windows and any other product names are the property of their owners and are used only to say what Reelign's file names are designed to work with. Reelign is not affiliated with, endorsed by or sponsored by any of them. Only Jellyfin (12.4.0) has been tested for importing the optional NFO files; Plex and Kodi have not.</p>
+
+<h2>Open-source software</h2>
+<p>The app is built with Avalonia (MIT), SkiaSharp and HarfBuzzSharp (MIT), ANGLE (BSD-style), Microsoft.Data.Sqlite (MIT), SQLitePCLRaw (Apache-2.0), SQLite (public domain), the .NET runtime (MIT) and the Inter font (SIL Open Font Licence 1.1). The full licence texts ship inside the app's <code>licenses</code> folder.</p>
+<p>This website uses <a href="assets/vendor/LICENSE-three.txt">three.js</a> (MIT) for the home-page animation, and the <a href="assets/fonts/licenses/OFL-BricolageGrotesque.txt">Bricolage Grotesque</a> (copyright 2022 The Bricolage Grotesque Project Authors) and <a href="assets/fonts/licenses/OFL-JetBrainsMono.txt">JetBrains Mono</a> (copyright 2020 The JetBrains Mono Project Authors) fonts, both under the SIL Open Font Licence 1.1.</p>
+
+<h2>Ownership and warranty</h2>
+<p>Copyright © Reelign. All rights reserved. The application's source code is private. Open-source components remain under their own licences and are not relicensed.</p>
+<p>Reelign is beta software provided as is, without warranty. It previews every change, keeps a journal and offers Undo, but it is not a backup. Try it on copies of your media first and keep your usual backups.</p>
+
+<h2>Contact</h2>
+<p>Questions, bug reports and takedown requests: <a href="https://github.com/Neon-Nomad/reelign-releases/issues">open an issue</a> on the project's GitHub page.</p>
+</div></main>
+
+<footer><div class="wrap"><p><a href="index.html">Home</a></p></div></footer>
+</body>
+</html>

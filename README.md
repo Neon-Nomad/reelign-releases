@@ -1,4 +1,4 @@
-<p align="center"><img src="icon.png" width="96" alt="Reelign icon"></p>
+<p align="center"><img src="assets/brand/readme-banner.jpg" alt="Reelign: brushed-metal wordmark with a vintage film camera and a strip of film" width="100%"></p>
 
 # Reelign
 
@@ -64,6 +64,8 @@ Reelign uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise
 TV metadata is provided by [TVmaze](https://www.tvmaze.com), used under CC BY-SA 4.0.
 
 Reelign is built with Avalonia, SQLite and other open-source components under their own licences.
+
+Header artwork: created in a ChatGPT conversation and supplied by the owner; its commercial-use terms have not been reviewed.
 
 ## Licence
 

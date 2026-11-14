@@ -55,7 +55,7 @@ Windows x64. The app is self-contained, so no separate .NET install is needed.
 
 ## Interested in testing?
 
-The private beta is invite-only for now. Open an issue on this repository to say you are interested. A public download will be announced here when it is ready.
+The public beta is ready to try: [download the ZIP from the Releases page](https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2). Please use copies of your media. Found a bug or want a feature? [Open an issue](https://github.com/Neon-Nomad/reelign-releases/issues/new) and say which media server you use and roughly how many files you rename.
 
 ## Credits and attribution
 

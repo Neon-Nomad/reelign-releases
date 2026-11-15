@@ -73,7 +73,7 @@ footer{padding-block:2rem;border-top:1px solid var(--line);font-size:.9rem;color
   <li><strong>Poster images</strong> are downloaded from TVmaze's image server (static.tvmaze.com) and TMDB's image server (image.tmdb.org) for the posters shown in the app, and cached on your PC.</li>
   <li><strong>Nothing else.</strong> The app has no analytics, crash reporting, update checks or accounts. Your queue, rename history, settings and the metadata cache stay on your PC in <code>%LOCALAPPDATA%\Reelign</code>.</li>
   <li><strong>The TMDB token</strong> is kept in memory for the session unless the user chooses to remember it; it is then protected with Windows data protection for that account.</li>
-  <li><strong>This website</strong> loads its fonts and scripts from its own server. It sets no cookies and has no analytics. GitHub, which hosts this site, keeps its own server logs.</li>
+  <li><strong>This website</strong> loads its fonts and scripts from its own server. It sets no cookies. It uses anonymous, cookie-free analytics (<a href="https://www.goatcounter.com">GoatCounter</a>) to count visits, traffic sources (the <code>?ref=</code> tag in a link) and download-button clicks; it does not track you across sites and the data is not sold. A button click shows interest only, not a completed download. GitHub, which hosts this site, keeps its own server logs.</li>
 </ul>
 
 <h2>Data sources</h2>
@@ -110,5 +110,22 @@ footer{padding-block:2rem;border-top:1px solid var(--line);font-size:.9rem;color
 </div></main>
 
 <footer><div class="wrap"><p><a href="index.html">Home</a></p></div></footer>
+<script>
+/* Anonymous, cookie-free analytics (GoatCounter). Remembers ?ref= for this tab only, so download clicks can be named by source. */
+(function () {
+  var ok = ['plex', 'kodi', 'jellyfin', 'facebook', 'reddit', 'youtube'], ref = '';
+  try {
+    var q = new URLSearchParams(location.search).get('ref');
+    q = q ? q.toLowerCase() : '';
+    if (ok.indexOf(q) !== -1) sessionStorage.setItem('reelign-ref', q);
+    ref = sessionStorage.getItem('reelign-ref') || '';
+  } catch (e) {}
+  if (ok.indexOf(ref) === -1) ref = '';
+  var name = 'download-' + (ref || 'direct');
+  var links = document.querySelectorAll('a.btn.primary[href*="releases/tag/beta-2"]');
+  for (var i = 0; i < links.length; i++) links[i].setAttribute('data-goatcounter-click', name);
+})();
+</script>
+<script data-goatcounter="https://reelign.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

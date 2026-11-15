@@ -723,5 +723,22 @@ function start(THREE) {
   render();
 })();
 </script>
+<script>
+/* Anonymous, cookie-free analytics (GoatCounter). Remembers ?ref= for this tab only, so download clicks can be named by source. */
+(function () {
+  var ok = ['plex', 'kodi', 'jellyfin', 'facebook', 'reddit', 'youtube'], ref = '';
+  try {
+    var q = new URLSearchParams(location.search).get('ref');
+    q = q ? q.toLowerCase() : '';
+    if (ok.indexOf(q) !== -1) sessionStorage.setItem('reelign-ref', q);
+    ref = sessionStorage.getItem('reelign-ref') || '';
+  } catch (e) {}
+  if (ok.indexOf(ref) === -1) ref = '';
+  var name = 'download-' + (ref || 'direct');
+  var links = document.querySelectorAll('a.btn.primary[href*="releases/tag/beta-2"]');
+  for (var i = 0; i < links.length; i++) links[i].setAttribute('data-goatcounter-click', name);
+})();
+</script>
+<script data-goatcounter="https://reelign.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

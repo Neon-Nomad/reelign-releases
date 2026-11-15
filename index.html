@@ -199,11 +199,11 @@ footer p{margin:0 0 .75rem;max-width:52rem}
       <h1>See every new filename before anything changes.</h1>
       <p class="lede">Reelign is a free Windows app that turns release-style names like <code>Show.S01E01.1080p.WEB-DL.mkv</code> into clean ones. <strong>You review the proposed names first.</strong> Every batch is recorded, and Undo puts the originals back.</p>
       <div class="cta-row">
-        <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">Download the beta for Windows</a>
+        <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64-setup.exe">Download the installer for Windows</a>
         <a class="btn ghost" href="#app">See the real app</a>
       </div>
-      <p class="fine"><strong>Portable and ready to run.</strong> Reelign includes its own .NET runtime. No separate .NET installation, setup wizard, or additional downloads required.</p>
-      <p class="fine">Free, no accounts, no paid features. Windows 10/11 x64. Public beta: the app is not code-signed, so Windows SmartScreen may warn.</p>
+      <p class="fine"><strong>Recommended: the installer.</strong> It installs for your Windows account only, with no administrator rights and no separate .NET installation. Prefer no install? Get the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64.zip">portable ZIP</a> and run <code>Reelign.Desktop.exe</code> from any folder.</p>
+      <p class="fine">Free, no accounts, no paid features. Windows 10/11 x64. Public beta: the installer and the app are not code-signed, so Windows SmartScreen may warn.</p>
     </div>
 
     <div class="stage-col">
@@ -389,9 +389,9 @@ footer p{margin:0 0 .75rem;max-width:52rem}
 <section id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <h2 id="faq-h">Questions</h2>
-    <details><summary>Can I download it?</summary><p>Yes. The public beta is a portable ZIP on the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">GitHub release page</a>, with its SHA-256 checksum. Unzip it anywhere and run <code>Reelign.Desktop.exe</code>; there is no installer. Please try it on copies of your media first.</p></details>
-    <details><summary>Why is the download approximately 46 MB?</summary><p>Reelign includes the .NET runtime it needs to run. That makes the download a little larger, but everything is included. Just extract the ZIP and launch Reelign. No separate .NET installation required.</p></details>
-    <details><summary>What do I need to run it?</summary><p>A 64-bit Windows PC. The app is self-contained, so you do not install .NET separately. The beta is not code-signed (a certificate costs money and Reelign is free), so Windows SmartScreen may show "Windows protected your PC". To continue, choose More info, then Run anyway. To confirm the file is the one we published, compare its SHA-256 with the checksum on the release page: in PowerShell, <code>Get-FileHash .\Reelign-beta-2-win-x64.zip</code>.</p></details>
+    <details><summary>Can I download it?</summary><p>Yes. The public beta comes two ways on the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">GitHub release page</a>, each with its SHA-256 checksum: a Windows installer (recommended) and a portable ZIP. The installer sets Reelign up for your account only, adds a Start Menu shortcut (and an optional desktop one), and appears in Windows Installed Apps so you can uninstall it. Uninstalling keeps your settings and rename history. The ZIP needs no install: unzip it anywhere and run <code>Reelign.Desktop.exe</code>. Please try it on copies of your media first.</p></details>
+    <details><summary>Why is the download 34 to 46 MB?</summary><p>Reelign includes the .NET runtime it needs to run. That makes the download a little larger, but everything is included. The installer is approximately 34 MB and the portable ZIP approximately 46 MB. No separate .NET installation required.</p></details>
+    <details><summary>What do I need to run it?</summary><p>A 64-bit Windows PC. The app is self-contained, so you do not install .NET separately. The installer and the app are not code-signed (a certificate costs money and Reelign is free), so Windows SmartScreen may show "Windows protected your PC". To continue, choose More info, then Run anyway. To confirm the file is the one we published, compare its SHA-256 with the checksum on the release page: in PowerShell, <code>Get-FileHash .\Reelign-beta-2-win-x64-setup.exe</code> (or the <code>.zip</code>).</p></details>
     <details><summary>Do I need an API key?</summary><p>Not for TV shows. For movies you need your own TMDB API Read Access Token, which is free from TMDB. It stays in memory for the session unless you choose to remember it, and then Windows protects it for your account.</p></details>
     <details><summary>Is it safe for my library?</summary><p>Reelign previews every change, keeps a journal and offers Undo, but no tool should be your only copy. While it is in beta, try it on copies first and keep your usual backups. If a batch is interrupted, Reelign blocks uncertain results instead of guessing.</p></details>
     <details><summary>Does it work with Plex and Kodi?</summary><p>The naming presets follow their conventions. Verified NFO import is so far confirmed only for Jellyfin, and the Plex and Kodi checks are still to do.</p></details>
@@ -403,8 +403,8 @@ footer p{margin:0 0 .75rem;max-width:52rem}
   <div class="wrap">
     <div class="box">
       <h2 id="join-h">Try the public beta</h2>
-      <p>Download the ZIP, try it on copies of your media, and tell us what you find. Say which media server you use and roughly how many files you rename.</p>
-      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/tag/beta-2">Download the beta for Windows</a> <a class="btn ghost" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Report a problem</a>
+      <p>Download the installer (or the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64.zip">portable ZIP</a>), try it on copies of your media, and tell us what you find. Say which media server you use and roughly how many files you rename.</p>
+      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64-setup.exe">Download the installer for Windows</a> <a class="btn ghost" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Report a problem</a>
     </div>
   </div>
 </section>
@@ -735,8 +735,10 @@ function start(THREE) {
   } catch (e) {}
   if (ok.indexOf(ref) === -1) ref = '';
   var name = 'download-' + (ref || 'direct');
-  var links = document.querySelectorAll('a.btn.primary[href*="releases/tag/beta-2"]');
+  var links = document.querySelectorAll('a.btn.primary[href$="beta-2-win-x64-setup.exe"]');
   for (var i = 0; i < links.length; i++) links[i].setAttribute('data-goatcounter-click', name);
+  var zips = document.querySelectorAll('a[href$="beta-2-win-x64.zip"]');
+  for (var j = 0; j < zips.length; j++) zips[j].setAttribute('data-goatcounter-click', 'download-zip-' + (ref || 'direct'));
 })();
 </script>
 <script data-goatcounter="https://reelign.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

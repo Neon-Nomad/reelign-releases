@@ -64,7 +64,7 @@ footer{padding-block:2rem;border-top:1px solid var(--line);font-size:.9rem;color
 <p>Reelign is a free Windows app for renaming TV and movie files. This page says what it contacts, where its data comes from, and which other people's work it uses.</p>
 
 <h2>Status</h2>
-<p>Reelign is in public beta. The download is a portable ZIP on GitHub Releases. The build is not code-signed, so Windows SmartScreen may warn when it is first run.</p>
+<p>Reelign is in public beta. The download is a per-user Windows installer (recommended) or a portable ZIP, both on GitHub Releases. Neither is code-signed, so Windows SmartScreen may warn when you first run them. The installer needs no administrator rights, and uninstalling it keeps your settings and rename history.</p>
 
 <h2>What Reelign contacts, and what it keeps</h2>
 <ul>
@@ -122,8 +122,10 @@ footer{padding-block:2rem;border-top:1px solid var(--line);font-size:.9rem;color
   } catch (e) {}
   if (ok.indexOf(ref) === -1) ref = '';
   var name = 'download-' + (ref || 'direct');
-  var links = document.querySelectorAll('a.btn.primary[href*="releases/tag/beta-2"]');
+  var links = document.querySelectorAll('a.btn.primary[href$="beta-2-win-x64-setup.exe"]');
   for (var i = 0; i < links.length; i++) links[i].setAttribute('data-goatcounter-click', name);
+  var zips = document.querySelectorAll('a[href$="beta-2-win-x64.zip"]');
+  for (var j = 0; j < zips.length; j++) zips[j].setAttribute('data-goatcounter-click', 'download-zip-' + (ref || 'direct'));
 })();
 </script>
 <script data-goatcounter="https://reelign.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

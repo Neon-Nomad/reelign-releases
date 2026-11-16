@@ -200,6 +200,7 @@ footer p{margin:0 0 .75rem;max-width:52rem}
       <p class="lede">Reelign is a free Windows app that turns release-style names like <code>Show.S01E01.1080p.WEB-DL.mkv</code> into clean ones. <strong>You review the proposed names first.</strong> Every batch is recorded, and Undo puts the originals back.</p>
       <div class="cta-row">
         <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64-setup.exe">Download the installer for Windows</a>
+        <a class="btn ghost" href="https://apps.microsoft.com/detail/9p802hmm7xln">Get it from the Microsoft Store</a>
         <a class="btn ghost" href="#app">See the real app</a>
       </div>
       <p class="fine"><strong>Recommended: the installer.</strong> It installs for your Windows account only, with no administrator rights and no separate .NET installation. Prefer no install? Get the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64.zip">portable ZIP</a> and run <code>Reelign.Desktop.exe</code> from any folder.</p>
@@ -404,7 +405,7 @@ footer p{margin:0 0 .75rem;max-width:52rem}
     <div class="box">
       <h2 id="join-h">Try the public beta</h2>
       <p>Download the installer (or the <a href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64.zip">portable ZIP</a>), try it on copies of your media, and tell us what you find. Say which media server you use and roughly how many files you rename.</p>
-      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64-setup.exe">Download the installer for Windows</a> <a class="btn ghost" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Report a problem</a>
+      <a class="btn primary" href="https://github.com/Neon-Nomad/reelign-releases/releases/download/beta-2/Reelign-beta-2-win-x64-setup.exe">Download the installer for Windows</a> <a class="btn ghost" href="https://apps.microsoft.com/detail/9p802hmm7xln">Get it from the Microsoft Store</a> <a class="btn ghost" href="https://github.com/Neon-Nomad/reelign-releases/issues/new">Report a problem</a>
     </div>
   </div>
 </section>
@@ -737,6 +738,8 @@ function start(THREE) {
   var name = 'download-' + (ref || 'direct');
   var links = document.querySelectorAll('a.btn.primary[href$="beta-2-win-x64-setup.exe"]');
   for (var i = 0; i < links.length; i++) links[i].setAttribute('data-goatcounter-click', name);
+  var stores = document.querySelectorAll('a[href*="apps.microsoft.com/detail/9p802hmm7xln"]');
+  for (var k = 0; k < stores.length; k++) stores[k].setAttribute('data-goatcounter-click', 'download-store-' + (ref || 'direct'));
   var zips = document.querySelectorAll('a[href$="beta-2-win-x64.zip"]');
   for (var j = 0; j < zips.length; j++) zips[j].setAttribute('data-goatcounter-click', 'download-zip-' + (ref || 'direct'));
 })();
